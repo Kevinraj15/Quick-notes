@@ -34,7 +34,7 @@ The Quick Notes application is designed to help users jot down ideas, to-dos, or
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/quick-notes.git
+    git clone https:https://kevinraj15.github.io/Quick-notes/
     ```
 
 2. **Navigate to the project folder:**
