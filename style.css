@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+body{
+    background: black;
+    background-image: url(board.webp);
+    background-repeat: no-repeat;
+    
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    color: #fff;
+    font-weight: 900;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px;
+    
+   
+}
+.container .notes{
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px; 
+    justify-content: flex-start;
+     width: 100%;
+     height: 100vh;
+    
+}
+
+.container .notes .note{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: #ffff;
+    padding: 20px;
+    box-shadow: 0 15px 35px rgba(145, 141, 141, 0.25);
+    font-family: "Handlee", cursive;
+    font-weight: 900;
+    font-style: normal;
+
+}
+.container .notes .note::before{
+    content: 'Double click to Remove this Note';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0,0.15);
+    padding: 3px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size :0.85em;
+    opacity: 0;
+    transition: 0.5s;
+}
+.container .notes .note:hover::before
+{
+    opacity: 1;
+}
+.create {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,0.15);
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6em;
+    cursor: pointer;
+}
+.create i{
+    position: absolute;
+    color: #fff;  
+}
+.createBox{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    z-index: 1000;
+    display: none;
+
+}
+.createBox textarea{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    outline: none;
+    font-size: 0.2em;
+    resize: none;
+
+}
+
+.details h3{
+     font-family: 'handlee',cursive;
+     /* user-select: none; */
+     font-size: 1.45em;
+}
+
+
+@media only screen and (max-width: 600px){
+    .container{
+        border: solid 10px wheat;
+        padding: 50px;
+    }
+    .notes{
+        padding: 50px;
+    }
+}
